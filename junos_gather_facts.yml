@@ -1,6 +1,6 @@
 ---
 - name: Get Device Facts - Install Juniper.junos Galaxy first! "sudo ansible-galaxy install Juniper.junos"
-  hosts: 10.65.4.37
+  hosts: juno1
   roles:
     - Juniper.junos 
   connection: network_cli

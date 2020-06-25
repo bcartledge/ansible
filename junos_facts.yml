@@ -1,14 +1,12 @@
 ---
-- name: Get JunoOS Facts
-  hosts: all
-  gather_facts: true
+- name: collect default set of facts
+  junos_facts:
 
-  tasks:
+- name: collect default set of facts and configuration
+  junos_facts:
+    gather_subset: config
 
-  - name: collect default set of facts
-    junos_facts:
-      gather_subset: config
-    
-  - name: Print JunOS facts to console
-    debug:
-      msg: "{{ ansible_facts }}"
+- name: Gather legacy and resource facts
+  junos_facts:
+    gather_subset: all
+    gather_network_resources: all

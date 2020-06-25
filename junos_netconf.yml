@@ -3,3 +3,4 @@
   connection: network_cli
   junos_netconf:
   when: ansible_network_os == 'junos'
+

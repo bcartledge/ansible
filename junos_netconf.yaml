@@ -1,9 +1,5 @@
 ---
-- name: enable netconf service on port 830
+- name: Enable NETCONF
+  connection: network_cli
   junos_netconf:
-    listens_on: 830
-    state: present
-
-- name: disable netconf service
-  junos_netconf:
-    state: absent
+  when: ansible_network_os == 'junos'

@@ -2,13 +2,13 @@
 - name: Get JunoOS Facts
   hosts: all
   gather_facts: false
-  ansible_network_os == 'junos'
-  
+  connection: network_cli
+
   tasks:
 
   - name: collect default set of facts
     junos_facts:
-      gather_subset: all
+      gather_subset: config
     
   - name: Print JunOS facts to console
     debug:

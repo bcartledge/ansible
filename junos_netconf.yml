@@ -7,5 +7,5 @@
         netconf_port: 830
         state: present
       vars:
-        ansible_connection: local
+        Ansible_connection: network_cli
       tags: netconf

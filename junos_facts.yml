@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: false
   connection: cli
-  ansible_network_os: junos
+  ansible_net_system: junos
 
   tasks:
 

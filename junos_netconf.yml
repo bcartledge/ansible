@@ -1,7 +1,6 @@
 ---
- name: Enable NETCONF on junos devices
- junos_netconf:
- when: ansible_network_os == 'junos'
- vars:
-   ansible_connection: network_cli
+- name: Enable NETCONF
+  connection: network_cli
+  junos_netconf:
+  when: ansible_network_os == 'junos'
 

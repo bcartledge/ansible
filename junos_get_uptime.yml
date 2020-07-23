@@ -9,9 +9,11 @@
       - name: username
         prompt:  Junos Username
         private: no
+
       - name: password
         prompt:  Junos Password
         private: yes
+
   tasks:
     - name: get uptime using galaxy module
       juniper_junos_command:
@@ -22,3 +24,8 @@
           port: 22
           user: "{{ username }}"
           passwd: "{{ password }}"
+        register: uptime
+
+    - name: display uptimes
+      debug:
+        var: uptime

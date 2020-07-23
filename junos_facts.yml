@@ -2,7 +2,7 @@
 - name: Get JunoOS Facts
   hosts: all
   gather_facts: false
-  connection: cli
+  connection: local
   ansible_net_system: junos
 
   tasks:
